@@ -1,0 +1,67 @@
+# Pinokio runtime config
+cache/
+ENVIRONMENT
+
+# Virtual environments
+app/env/
+env/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Logs
+logs/
+# Dev/runtime artifacts (not sources) - app.err, dl_base.log, safe_dl.DONE, ...
+*.log
+*.err
+safe_dl.DONE
+
+# Local overrides (config.py loads this via python-dotenv; never commit secrets)
+.env
+
+# Temp work dir (TEMP_DIR), created by config.py at startup
+tmp/
+
+# Pinokio temp files
+.pinokio-temp/
+
+# AI tool local settings
+.claude/
+
+# App folder (generated during install - everything is copied from root or downloaded)
+app/
+
+# OS files
+.DS_Store
+Thumbs.db
+nul
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ===== Local runtime data (8GB adaptation / app runtime) =====
+output/
+uploads/
+logs/
+queue.json
+verified_models.json
+timing_history.json
+# Downloaded model weights live here after the installer runs
+songgeneration_base/
+songgeneration_base_new/
+songgeneration_base_full/
+songgeneration_large/
+*.flac
+*.wav
+*.mp3
